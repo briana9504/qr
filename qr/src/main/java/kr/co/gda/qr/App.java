@@ -46,7 +46,7 @@ public class App extends JFrame  {//메인 진입단 메소드
         //QR 이미지 관련(모양, 데이터:컨텐츠 추가)
         BitMatrix martix =  qrWriter.encode(contents.toString(), BarcodeFormat.QR_CODE, 300, 300); //(콘텐츠, QR종류, width, high)
         //QR 설정(색상)
-        // MatrixToImageConfig config = new MatrixToImageConfig(0xFFFFFF, 0xFF000000);//(qr생상, 배경색상) --> 16진수(0x) FF:투명도, FF:R, FF:G, FF:B
+        // MatrixToImageConfig config = new MatrixToImageConfig(0xFFFFFF, 0xFF000000);//(qr생상, 배경색상) --> 16진수(0x) FF:투명도, FF:R, FF:G, FF:B 
         //두개의 설정 매개변수를 이용하여 이미지 생성
         BufferedImage qrImage = MatrixToImageWriter.toBufferedImage(martix);
         
